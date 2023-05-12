@@ -49,6 +49,26 @@
 
         <!-- JS -->
         <script>
+            let soundBoom = new Audio('sounds/boom.wav');
+            soundBoom.preload = 'auto';
+            soundBoom.load();
+            let soundClap = new Audio('sounds/clap.wav');
+            soundClap.preload = 'auto';
+            let soundHihat = new Audio('sounds/hihat.wav');
+            soundHihat.preload = 'auto';
+            let soundKick = new Audio('sounds/kick.wav');
+            soundKick.preload = 'auto';
+            let soundOpenhat = new Audio('sounds/openhat.wav');
+            soundOpenhat.preload = 'auto';
+            let soundRide = new Audio('sounds/ride.wav');
+            soundRide.preload = 'auto';
+            let soundSnare = new Audio('sounds/snare.wav');
+            soundSnare.preload = 'auto';
+            let soundTink = new Audio('sounds/tink.wav');
+            soundTink.preload = 'auto';
+            let soundTom = new Audio('sounds/tom.wav');
+            soundTom.preload = 'auto';
+
             let keys = document.getElementsByClassName("key");
             for (let i=0; i<keys.length; i++) {
                 console.log(keys[i]);
@@ -56,8 +76,10 @@
             }
 
             function playSound() {
+                var click = soundBoom.cloneNode();
+                click.play();
                 this.classList.add("key-clicked");
-            }
+}
             
         </script>
     </body>
