@@ -7,44 +7,58 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="container">
-        <div class="key">
-            <p class="key-symbol">a</p>
-            <p class="key-name">Clap</p>
+    <body>
+        <div class="container">
+            <div class="key">
+                <p class="key-symbol">a</p>
+                <p class="key-name">Clap</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">s</p>
+                <p class="key-name">Hihat</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">d</p>
+                <p class="key-name">Kick</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">f</p>
+                <p class="key-name">Openhat</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">G</p>
+                <p class="key-name">Boom</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">h</p>
+                <p class="key-name">Ride</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">j</p>
+                <p class="key-name">Snare</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">k</p>
+                <p class="key-name">Tom</p>
+            </div>
+            <div class="key">
+                <p class="key-symbol">l</p>
+                <p class="key-name">Tink</p>
+            </div>
         </div>
-        <div class="key">
-            <p class="key-symbol">s</p>
-            <p class="key-name">Hihat</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">d</p>
-            <p class="key-name">Kick</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">f</p>
-            <p class="key-name">Openhat</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">G</p>
-            <p class="key-name">Boom</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">h</p>
-            <p class="key-name">Ride</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">j</p>
-            <p class="key-name">Snare</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">k</p>
-            <p class="key-name">Tom</p>
-        </div>
-        <div class="key">
-            <p class="key-symbol">l</p>
-            <p class="key-name">Tink</p>
-        </div>
-    </div>
-</body>
+
+        <!-- JS -->
+        <script>
+            let keys = document.getElementsByClassName("key");
+            for (let i=0; i<keys.length; i++) {
+                console.log(keys[i]);
+                keys[i].addEventListener("click", playSound);
+            }
+
+            function playSound() {
+                this.classList.add("key-clicked");
+            }
+            
+        </script>
+    </body>
 </html>
