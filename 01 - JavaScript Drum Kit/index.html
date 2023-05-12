@@ -78,9 +78,23 @@
             function playSound() {
                 var click = soundBoom.cloneNode();
                 click.play();
+
+                if (this.classList.contains("key-clicked-again")) {
+                    this.classList.remove("key-clicked-again");
+                    this.classList.add("key-clicked");
+                } else {
+                    this.classList.remove("key-clicked");
+                    this.classList.add("key-clicked-again");
+                }
+
                 this.classList.add("key-clicked");
-}
-            
+
+                // this.style.cssText = `
+                //     animation-name: drum;
+                //     animation-duration: 2s;
+                // `;
+            }
+
         </script>
     </body>
 </html>
