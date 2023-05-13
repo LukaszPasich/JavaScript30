@@ -54,47 +54,88 @@
             soundBoom.load();
             let soundClap = new Audio('sounds/clap.wav');
             soundClap.preload = 'auto';
+            soundClap.load();
             let soundHihat = new Audio('sounds/hihat.wav');
             soundHihat.preload = 'auto';
+            soundHihat.load();
             let soundKick = new Audio('sounds/kick.wav');
             soundKick.preload = 'auto';
+            soundKick.load();
             let soundOpenhat = new Audio('sounds/openhat.wav');
             soundOpenhat.preload = 'auto';
+            soundOpenhat.load();
             let soundRide = new Audio('sounds/ride.wav');
             soundRide.preload = 'auto';
+            soundRide.load();
             let soundSnare = new Audio('sounds/snare.wav');
             soundSnare.preload = 'auto';
+            soundSnare.load();
             let soundTink = new Audio('sounds/tink.wav');
             soundTink.preload = 'auto';
+            soundTink.load();
             let soundTom = new Audio('sounds/tom.wav');
             soundTom.preload = 'auto';
+            soundTom.load();
 
-            let keys = document.getElementsByClassName("key");
-            for (let i=0; i<keys.length; i++) {
-                console.log(keys[i]);
-                keys[i].addEventListener("click", playSound);
-            }
 
-            function playSound() {
-                var click = soundBoom.cloneNode();
-                click.play();
-
-                if (this.classList.contains("key-clicked-again")) {
-                    this.classList.remove("key-clicked-again");
-                    this.classList.add("key-clicked");
-                } else {
-                    this.classList.remove("key-clicked");
-                    this.classList.add("key-clicked-again");
+            window.addEventListener('keydown', checkKeyPressed);
+            
+            function checkKeyPressed(e) {
+                var keyPressed = e.key;
+                console.log(keyPressed);
+                if (keyPressed == "a") {
+                    var click = soundBoom.cloneNode();
+                    click.play();
+                } else if (keyPressed == "s") {
+                    var click = soundClap.cloneNode();
+                    click.play();
+                } else if (keyPressed == "d") {
+                    var click = soundHihat.cloneNode();
+                    click.play();
+                } else if (keyPressed == "f") {
+                    var click = soundKick.cloneNode();
+                    click.play();
+                } else if (keyPressed == "g") {
+                    var click = soundOpenhat.cloneNode();
+                    click.play();
+                } else if (keyPressed == "h") {
+                    var click = soundRide.cloneNode();
+                    click.play();
+                } else if (keyPressed == "j") {
+                    var click = soundSnare.cloneNode();
+                    click.play();
+                } else if (keyPressed == "k") {
+                    var click = soundTink.cloneNode();
+                    click.play();
+                } else if (keyPressed == "l") {
+                    var click = soundTom.cloneNode();
+                    click.play();
                 }
-
-                this.classList.add("key-clicked");
-
-                // this.style.cssText = `
-                //     animation-name: drum;
-                //     animation-duration: 2s;
-                // `;
             }
 
+        
+            // ---------- Click to play -----------
+
+            // let keys = document.getElementsByClassName("key");
+            // for (let i=0; i<keys.length; i++) {
+            //     console.log(keys[i]);
+            //     keys[i].addEventListener("click", playSound);
+            // }
+
+            // function playSound() {
+            //     var click = soundBoom.cloneNode();
+            //     click.play();
+
+            //     if (this.classList.contains("key-clicked-again")) {
+            //         this.classList.remove("key-clicked-again");
+            //         this.classList.add("key-clicked");
+            //     } else {
+            //         this.classList.remove("key-clicked");
+            //         this.classList.add("key-clicked-again");
+            //     }
+            // }
+
+            
         </script>
     </body>
 </html>
