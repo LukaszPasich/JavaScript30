@@ -9,39 +9,39 @@
 </head>
     <body>
         <div class="container">
-            <div class="key">
+            <div class="key" id="aKey">
                 <p class="key-symbol">a</p>
                 <p class="key-name">Clap</p>
             </div>
-            <div class="key">
+            <div class="key" id="sKey">
                 <p class="key-symbol">s</p>
                 <p class="key-name">Hihat</p>
             </div>
-            <div class="key">
+            <div class="key" id="dKey">
                 <p class="key-symbol">d</p>
                 <p class="key-name">Kick</p>
             </div>
-            <div class="key">
+            <div class="key" id="fKey">
                 <p class="key-symbol">f</p>
                 <p class="key-name">Openhat</p>
             </div>
-            <div class="key">
+            <div class="key" id="gKey">
                 <p class="key-symbol">G</p>
                 <p class="key-name">Boom</p>
             </div>
-            <div class="key">
+            <div class="key" id="hKey">
                 <p class="key-symbol">h</p>
                 <p class="key-name">Ride</p>
             </div>
-            <div class="key">
+            <div class="key" id="jKey">
                 <p class="key-symbol">j</p>
                 <p class="key-name">Snare</p>
             </div>
-            <div class="key">
+            <div class="key" id="kKey">
                 <p class="key-symbol">k</p>
                 <p class="key-name">Tom</p>
             </div>
-            <div class="key">
+            <div class="key" id="lKey">
                 <p class="key-symbol">l</p>
                 <p class="key-name">Tink</p>
             </div>
@@ -77,6 +77,16 @@
             soundTom.preload = 'auto';
             soundTom.load();
 
+            let aKey = document.getElementById("aKey");
+            let sKey = document.getElementById("sKey");
+            let dKey = document.getElementById("dKey");
+            let fKey = document.getElementById("fKey");
+            let gKey = document.getElementById("gKey");
+            let hKey = document.getElementById("hKey");
+            let jKey = document.getElementById("jKey");
+            let kKey = document.getElementById("kKey");
+            let lKey = document.getElementById("lKey");
+
 
             window.addEventListener('keydown', checkKeyPressed);
             
@@ -86,30 +96,101 @@
                 if (keyPressed == "a") {
                     var click = soundBoom.cloneNode();
                     click.play();
+                    if (aKey.classList.contains("key-clicked-again")) {
+                        aKey.classList.remove("key-clicked-again");
+                        aKey.classList.add("key-clicked");
+                    } else {
+                        aKey.classList.remove("key-clicked");
+                        aKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "s") {
                     var click = soundClap.cloneNode();
                     click.play();
+                    if (sKey.classList.contains("key-clicked-again")) {
+                        sKey.classList.remove("key-clicked-again");
+                        sKey.classList.add("key-clicked");
+                    } else {
+                        sKey.classList.remove("key-clicked");
+                        sKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "d") {
                     var click = soundHihat.cloneNode();
                     click.play();
+                    if (dKey.classList.contains("key-clicked-again")) {
+                        dKey.classList.remove("key-clicked-again");
+                        dKey.classList.add("key-clicked");
+                    } else {
+                        dKey.classList.remove("key-clicked");
+                        dKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "f") {
                     var click = soundKick.cloneNode();
                     click.play();
+                    if (fKey.classList.contains("key-clicked-again")) {
+                        fKey.classList.remove("key-clicked-again");
+                        fKey.classList.add("key-clicked");
+                    } else {
+                        fKey.classList.remove("key-clicked");
+                        fKey.classList.add("key-clicked-again");
+                    }
+                    
                 } else if (keyPressed == "g") {
                     var click = soundOpenhat.cloneNode();
                     click.play();
+                    if (gKey.classList.contains("key-clicked-again")) {
+                        gKey.classList.remove("key-clicked-again");
+                        gKey.classList.add("key-clicked");
+                    } else {
+                        gKey.classList.remove("key-clicked");
+                        gKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "h") {
                     var click = soundRide.cloneNode();
                     click.play();
+                    if (hKey.classList.contains("key-clicked-again")) {
+                        hKey.classList.remove("key-clicked-again");
+                        hKey.classList.add("key-clicked");
+                    } else {
+                        hKey.classList.remove("key-clicked");
+                        hKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "j") {
                     var click = soundSnare.cloneNode();
                     click.play();
+                    if (jKey.classList.contains("key-clicked-again")) {
+                        jKey.classList.remove("key-clicked-again");
+                        jKey.classList.add("key-clicked");
+                    } else {
+                        jKey.classList.remove("key-clicked");
+                        jKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "k") {
                     var click = soundTink.cloneNode();
                     click.play();
+                    if (kKey.classList.contains("key-clicked-again")) {
+                        kKey.classList.remove("key-clicked-again");
+                        kKey.classList.add("key-clicked");
+                    } else {
+                        kKey.classList.remove("key-clicked");
+                        kKey.classList.add("key-clicked-again");
+                    }
+
                 } else if (keyPressed == "l") {
                     var click = soundTom.cloneNode();
                     click.play();
+                    if (lKey.classList.contains("key-clicked-again")) {
+                        lKey.classList.remove("key-clicked-again");
+                        lKey.classList.add("key-clicked");
+                    } else {
+                        lKey.classList.remove("key-clicked");
+                        lKey.classList.add("key-clicked-again");
+                    }
                 }
             }
 
